@@ -33,8 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Interop.WMPLib">
+      <HintPath>bin\lib\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NAudio">
+      <HintPath>bin\lib\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio.WindowsMediaFormat">
+      <HintPath>bin\lib\NAudio.WindowsMediaFormat.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,10 +55,14 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp">
+      <HintPath>bin\lib\taglib-sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.WinControls, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Fluent, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2018.1.116.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <HintPath>..\lib\RCWF\2018.1.116.40\Telerik.WinControls.UI.dll</HintPath>
       <Private>True</Private>
@@ -57,14 +73,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RadForm1.cs">
+    <Compile Include="Behavior.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RadForm1.Designer.cs">
-      <DependentUpon>RadForm1.cs</DependentUpon>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="RadForm1.resx">
-      <DependentUpon>RadForm1.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +96,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,6 +113,37 @@
   </ItemGroup>
   <ItemGroup>
     <!--sirinie -->
+    <None Include="bin\Release\icons\Повторение black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\icons\Повторение white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\icons\Меню black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\icons\Меню white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\icons\Перемешать black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\icons\Перемешать white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\icons\cover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\icons\Предыдущий.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\icons\Следующий.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\icons\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Release\icons\Пауза.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
