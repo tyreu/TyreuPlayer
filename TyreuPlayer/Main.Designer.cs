@@ -50,6 +50,13 @@ namespace TyreuPlayer
             this.TitleLabel = new Telerik.WinControls.UI.RadLabel();
             this.ArtistLabel = new Telerik.WinControls.UI.RadLabel();
             this.fluentTheme1 = new Telerik.WinControls.Themes.FluentTheme();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
+            this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radContextMenuManager1 = new Telerik.WinControls.UI.RadContextMenuManager();
             this.PlayButton = new Telerik.WinControls.UI.RadButton();
             this.roundRectShape1 = new Telerik.WinControls.RoundRectShape(this.components);
             this.radButton2 = new Telerik.WinControls.UI.RadButton();
@@ -57,7 +64,10 @@ namespace TyreuPlayer
             this.PlaylistButton = new Telerik.WinControls.UI.RadButton();
             this.ReplayButton = new Telerik.WinControls.UI.RadButton();
             this.ShuffleButton = new Telerik.WinControls.UI.RadButton();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.radCollapsiblePanel1 = new Telerik.WinControls.UI.RadCollapsiblePanel();
+            this.PlayListTree = new Telerik.WinControls.UI.RadTreeView();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
@@ -80,6 +90,10 @@ namespace TyreuPlayer
             ((System.ComponentModel.ISupportInitialize)(this.PlaylistButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReplayButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShuffleButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radCollapsiblePanel1)).BeginInit();
+            this.radCollapsiblePanel1.PanelContainer.SuspendLayout();
+            this.radCollapsiblePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PlayListTree)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +111,7 @@ namespace TyreuPlayer
             // 
             // 
             this.radPanel1.RootElement.BorderHighlightThickness = 0;
-            this.radPanel1.Size = new System.Drawing.Size(446, 57);
+            this.radPanel1.Size = new System.Drawing.Size(816, 57);
             this.radPanel1.TabIndex = 3;
             this.radPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MoveForm);
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel1.GetChildAt(0).GetChildAt(1))).BoxStyle = Telerik.WinControls.BorderBoxStyle.FourBorders;
@@ -110,10 +124,10 @@ namespace TyreuPlayer
             this.radLabel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.radLabel3.AutoSize = false;
             this.radLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.radLabel3.Image = ((System.Drawing.Image)(resources.GetObject("radLabel3.Image")));
             this.radLabel3.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radLabel3.Location = new System.Drawing.Point(257, 0);
+            this.radLabel3.Location = new System.Drawing.Point(627, 0);
             this.radLabel3.Name = "radLabel3";
             this.radLabel3.Size = new System.Drawing.Size(47, 47);
             this.radLabel3.TabIndex = 6;
@@ -126,7 +140,7 @@ namespace TyreuPlayer
             // 
             // NameLabel
             // 
-            this.NameLabel.Font = new System.Drawing.Font("NewPortLandOpti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameLabel.Font = new System.Drawing.Font("NewPortLandOpti", 15.75F);
             this.NameLabel.ForeColor = System.Drawing.Color.White;
             this.NameLabel.Location = new System.Drawing.Point(3, 3);
             this.NameLabel.Name = "NameLabel";
@@ -144,10 +158,10 @@ namespace TyreuPlayer
             this.radLabel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.radLabel2.AutoSize = false;
             this.radLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.radLabel2.Image = ((System.Drawing.Image)(resources.GetObject("radLabel2.Image")));
             this.radLabel2.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radLabel2.Location = new System.Drawing.Point(304, 0);
+            this.radLabel2.Location = new System.Drawing.Point(674, 0);
             this.radLabel2.Name = "radLabel2";
             this.radLabel2.Size = new System.Drawing.Size(47, 47);
             this.radLabel2.TabIndex = 5;
@@ -164,14 +178,13 @@ namespace TyreuPlayer
             this.radLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.radLabel1.AutoSize = false;
             this.radLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.radLabel1.Image = ((System.Drawing.Image)(resources.GetObject("radLabel1.Image")));
             this.radLabel1.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radLabel1.Location = new System.Drawing.Point(351, 0);
+            this.radLabel1.Location = new System.Drawing.Point(721, 0);
             this.radLabel1.Name = "radLabel1";
             this.radLabel1.Size = new System.Drawing.Size(47, 47);
             this.radLabel1.TabIndex = 4;
-            this.radLabel1.Text = "X";
             this.radLabel1.Click += new System.EventHandler(this.MaximizeLabel_Click);
             this.radLabel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MinimizeAndMaximize_MouseDown);
             this.radLabel1.MouseEnter += new System.EventHandler(this.MinimizeAndMaximize_MouseHover);
@@ -185,14 +198,13 @@ namespace TyreuPlayer
             this.CloseLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.CloseLabel.AutoSize = false;
             this.CloseLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CloseLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.CloseLabel.Image = ((System.Drawing.Image)(resources.GetObject("CloseLabel.Image")));
             this.CloseLabel.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.CloseLabel.Location = new System.Drawing.Point(398, 0);
+            this.CloseLabel.Location = new System.Drawing.Point(768, 0);
             this.CloseLabel.Name = "CloseLabel";
             this.CloseLabel.Size = new System.Drawing.Size(47, 47);
             this.CloseLabel.TabIndex = 3;
-            this.CloseLabel.Text = "X";
             this.CloseLabel.Click += new System.EventHandler(this.CloseLabel_Click);
             this.CloseLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CloseLabel_MouseDown);
             this.CloseLabel.MouseEnter += new System.EventHandler(this.CloseLabel_MouseHover);
@@ -407,7 +419,7 @@ namespace TyreuPlayer
             // 
             // CurrentDurationLabel
             // 
-            this.CurrentDurationLabel.Font = new System.Drawing.Font("Leelawadee UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentDurationLabel.Font = new System.Drawing.Font("Leelawadee UI Semilight", 12F);
             this.CurrentDurationLabel.ForeColor = System.Drawing.Color.White;
             this.CurrentDurationLabel.Location = new System.Drawing.Point(35, 557);
             this.CurrentDurationLabel.Name = "CurrentDurationLabel";
@@ -417,7 +429,7 @@ namespace TyreuPlayer
             // 
             // FullDurationLabel
             // 
-            this.FullDurationLabel.Font = new System.Drawing.Font("Leelawadee UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FullDurationLabel.Font = new System.Drawing.Font("Leelawadee UI Semilight", 12F);
             this.FullDurationLabel.ForeColor = System.Drawing.Color.White;
             this.FullDurationLabel.Location = new System.Drawing.Point(365, 557);
             this.FullDurationLabel.Name = "FullDurationLabel";
@@ -431,9 +443,17 @@ namespace TyreuPlayer
             this.radPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(64)))), ((int)(((byte)(91)))));
             this.radPanel2.Controls.Add(this.pictureBox1);
             this.radPanel2.Location = new System.Drawing.Point(70, 133);
+            this.radPanel2.MaximumSize = new System.Drawing.Size(300, 300);
+            this.radPanel2.MinimumSize = new System.Drawing.Size(300, 300);
             this.radPanel2.Name = "radPanel2";
             this.radPanel2.Padding = new System.Windows.Forms.Padding(30);
-            this.radPanel2.Size = new System.Drawing.Size(300, 313);
+            this.radContextMenuManager1.SetRadContextMenu(this.radPanel2, this.radContextMenu1);
+            // 
+            // 
+            // 
+            this.radPanel2.RootElement.MaxSize = new System.Drawing.Size(300, 300);
+            this.radPanel2.RootElement.MinSize = new System.Drawing.Size(300, 300);
+            this.radPanel2.Size = new System.Drawing.Size(300, 300);
             this.radPanel2.TabIndex = 13;
             this.radPanel2.Text = "radPanel2";
             // 
@@ -441,9 +461,11 @@ namespace TyreuPlayer
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::TyreuPlayer.Properties.Resources.cover;
+            this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox1.Location = new System.Drawing.Point(30, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 253);
+            this.radContextMenuManager1.SetRadContextMenu(this.pictureBox1, this.radContextMenu1);
+            this.pictureBox1.Size = new System.Drawing.Size(240, 240);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
@@ -451,26 +473,108 @@ namespace TyreuPlayer
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = false;
-            this.TitleLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TitleLabel.ForeColor = System.Drawing.Color.White;
             this.TitleLabel.Location = new System.Drawing.Point(12, 452);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(419, 30);
             this.TitleLabel.TabIndex = 14;
-            this.TitleLabel.Text = "Title";
+            this.TitleLabel.Text = "Welcome!";
             this.TitleLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ArtistLabel
             // 
             this.ArtistLabel.AutoSize = false;
-            this.ArtistLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ArtistLabel.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ArtistLabel.ForeColor = System.Drawing.Color.White;
             this.ArtistLabel.Location = new System.Drawing.Point(12, 488);
             this.ArtistLabel.Name = "ArtistLabel";
             this.ArtistLabel.Size = new System.Drawing.Size(419, 30);
             this.ArtistLabel.TabIndex = 15;
-            this.ArtistLabel.Text = "Artist";
+            this.ArtistLabel.Text = "This is Tyreu Player I";
             this.ArtistLabel.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.TrackPlaying);
+            // 
+            // radContextMenu1
+            // 
+            this.radContextMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem1,
+            this.radMenuItem2,
+            this.radMenuItem3,
+            this.radMenuItem4});
+            this.radContextMenu1.ThemeName = "Fluent";
+            // 
+            // radMenuItem1
+            // 
+            this.radMenuItem1.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radMenuItem1.AngleTransform = 0F;
+            this.radMenuItem1.FlipText = false;
+            this.radMenuItem1.HintText = "";
+            this.radMenuItem1.Image = null;
+            this.radMenuItem1.ImageIndex = -1;
+            this.radMenuItem1.ImageKey = "";
+            this.radMenuItem1.Margin = new System.Windows.Forms.Padding(0);
+            this.radMenuItem1.Name = "radMenuItem1";
+            this.radMenuItem1.Padding = new System.Windows.Forms.Padding(0);
+            this.radMenuItem1.RightToLeft = false;
+            this.radMenuItem1.Text = "Добавить трек";
+            this.radMenuItem1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radMenuItem1.TextOrientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // radMenuItem2
+            // 
+            this.radMenuItem2.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radMenuItem2.AngleTransform = 0F;
+            this.radMenuItem2.FlipText = false;
+            this.radMenuItem2.HintText = "";
+            this.radMenuItem2.Image = null;
+            this.radMenuItem2.ImageIndex = -1;
+            this.radMenuItem2.ImageKey = "";
+            this.radMenuItem2.Margin = new System.Windows.Forms.Padding(0);
+            this.radMenuItem2.Name = "radMenuItem2";
+            this.radMenuItem2.Padding = new System.Windows.Forms.Padding(0);
+            this.radMenuItem2.RightToLeft = false;
+            this.radMenuItem2.Text = "Добавить папку";
+            this.radMenuItem2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radMenuItem2.TextOrientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // radMenuItem3
+            // 
+            this.radMenuItem3.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radMenuItem3.AngleTransform = 0F;
+            this.radMenuItem3.FlipText = false;
+            this.radMenuItem3.HintText = "";
+            this.radMenuItem3.Image = null;
+            this.radMenuItem3.ImageIndex = -1;
+            this.radMenuItem3.ImageKey = "";
+            this.radMenuItem3.Margin = new System.Windows.Forms.Padding(0);
+            this.radMenuItem3.Name = "radMenuItem3";
+            this.radMenuItem3.Padding = new System.Windows.Forms.Padding(0);
+            this.radMenuItem3.RightToLeft = false;
+            this.radMenuItem3.Text = "я хз";
+            this.radMenuItem3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radMenuItem3.TextOrientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // radMenuItem4
+            // 
+            this.radMenuItem4.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            this.radMenuItem4.AngleTransform = 0F;
+            this.radMenuItem4.FlipText = false;
+            this.radMenuItem4.HintText = "";
+            this.radMenuItem4.Image = null;
+            this.radMenuItem4.ImageIndex = -1;
+            this.radMenuItem4.ImageKey = "";
+            this.radMenuItem4.Margin = new System.Windows.Forms.Padding(0);
+            this.radMenuItem4.Name = "radMenuItem4";
+            this.radMenuItem4.Padding = new System.Windows.Forms.Padding(0);
+            this.radMenuItem4.RightToLeft = false;
+            this.radMenuItem4.Text = "шо писать";
+            this.radMenuItem4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radMenuItem4.TextOrientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // PlayButton
             // 
@@ -504,6 +608,7 @@ namespace TyreuPlayer
             this.radButton2.Size = new System.Drawing.Size(60, 45);
             this.radButton2.TabIndex = 17;
             this.radButton2.ThemeName = "Fluent";
+            this.radButton2.Click += new System.EventHandler(this.NextTrackButton_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButton2.GetChildAt(0))).Image = global::TyreuPlayer.Properties.Resources.Следующий;
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButton2.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButton2.GetChildAt(0))).DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
@@ -525,6 +630,7 @@ namespace TyreuPlayer
             this.radButton1.Size = new System.Drawing.Size(60, 45);
             this.radButton1.TabIndex = 16;
             this.radButton1.ThemeName = "Fluent";
+            this.radButton1.Click += new System.EventHandler(this.PrevTrackButton_Click);
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).Image = global::TyreuPlayer.Properties.Resources.Предыдущий;
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             ((Telerik.WinControls.UI.RadButtonElement)(this.radButton1.GetChildAt(0))).DisplayStyle = Telerik.WinControls.DisplayStyle.Image;
@@ -602,17 +708,60 @@ namespace TyreuPlayer
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.ShuffleButton.GetChildAt(0).GetChildAt(0))).BackColor = System.Drawing.Color.Transparent;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.ShuffleButton.GetChildAt(0).GetChildAt(2))).Visibility = Telerik.WinControls.ElementVisibility.Hidden;
             // 
-            // timer1
+            // radCollapsiblePanel1
             // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.radCollapsiblePanel1.ExpandDirection = Telerik.WinControls.UI.RadDirection.Right;
+            this.radCollapsiblePanel1.HorizontalHeaderAlignment = Telerik.WinControls.UI.RadHorizontalAlignment.Center;
+            this.radCollapsiblePanel1.Location = new System.Drawing.Point(457, 63);
+            this.radCollapsiblePanel1.Name = "radCollapsiblePanel1";
+            this.radCollapsiblePanel1.OwnerBoundsCache = new System.Drawing.Rectangle(457, 63, 347, 695);
+            // 
+            // radCollapsiblePanel1.PanelContainer
+            // 
+            this.radCollapsiblePanel1.PanelContainer.Controls.Add(this.PlayListTree);
+            this.radCollapsiblePanel1.PanelContainer.Size = new System.Drawing.Size(319, 693);
+            this.radCollapsiblePanel1.Size = new System.Drawing.Size(347, 695);
+            this.radCollapsiblePanel1.TabIndex = 18;
+            this.radCollapsiblePanel1.VerticalHeaderAlignment = Telerik.WinControls.UI.RadVerticalAlignment.Center;
+            this.radCollapsiblePanel1.Collapsing += new System.ComponentModel.CancelEventHandler(this.ClosingPlaylist);
+            ((Telerik.WinControls.UI.RadCollapsiblePanelElement)(this.radCollapsiblePanel1.GetChildAt(0))).ExpandDirection = Telerik.WinControls.UI.RadDirection.Right;
+            ((Telerik.WinControls.UI.RadCollapsiblePanelElement)(this.radCollapsiblePanel1.GetChildAt(0))).IsExpanded = true;
+            ((Telerik.WinControls.UI.CollapsiblePanelHeaderElement)(this.radCollapsiblePanel1.GetChildAt(0).GetChildAt(1))).HorizontalHeaderAlignment = Telerik.WinControls.UI.RadHorizontalAlignment.Center;
+            ((Telerik.WinControls.UI.CollapsiblePanelHeaderElement)(this.radCollapsiblePanel1.GetChildAt(0).GetChildAt(1))).VerticalHeaderAlignment = Telerik.WinControls.UI.RadVerticalAlignment.Center;
+            ((Telerik.WinControls.UI.CollapsiblePanelHeaderElement)(this.radCollapsiblePanel1.GetChildAt(0).GetChildAt(1))).Orientation = System.Windows.Forms.Orientation.Vertical;
+            ((Telerik.WinControls.UI.CollapsiblePanelTextElement)(this.radCollapsiblePanel1.GetChildAt(0).GetChildAt(1).GetChildAt(1))).TextOrientation = System.Windows.Forms.Orientation.Vertical;
+            ((Telerik.WinControls.UI.CollapsiblePanelTextElement)(this.radCollapsiblePanel1.GetChildAt(0).GetChildAt(1).GetChildAt(1))).Text = "";
+            ((Telerik.WinControls.UI.CollapsiblePanelTextElement)(this.radCollapsiblePanel1.GetChildAt(0).GetChildAt(1).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            ((Telerik.WinControls.UI.CollapsiblePanelTextElement)(this.radCollapsiblePanel1.GetChildAt(0).GetChildAt(1).GetChildAt(1))).Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            ((Telerik.WinControls.UI.CollapsiblePanelTextElement)(this.radCollapsiblePanel1.GetChildAt(0).GetChildAt(1).GetChildAt(1))).StretchVertically = false;
+            // 
+            // PlayListTree
+            // 
+            this.PlayListTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PlayListTree.Location = new System.Drawing.Point(0, 0);
+            this.PlayListTree.Name = "PlayListTree";
+            this.PlayListTree.Size = new System.Drawing.Size(319, 693);
+            this.PlayListTree.SpacingBetweenNodes = -1;
+            this.PlayListTree.TabIndex = 0;
+            this.PlayListTree.NodeMouseDoubleClick += new Telerik.WinControls.UI.RadTreeView.TreeViewEventHandler(this.PlayListTree_NodeMouseDoubleClick);
+            ((Telerik.WinControls.UI.RadTreeViewElement)(this.PlayListTree.GetChildAt(0))).NodeSpacing = -1;
+            ((Telerik.WinControls.UI.RadTreeViewElement)(this.PlayListTree.GetChildAt(0))).Font = new System.Drawing.Font("Constantia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.ScrollArtist);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(31)))), ((int)(((byte)(62)))));
-            this.ClientSize = new System.Drawing.Size(446, 770);
+            this.ClientSize = new System.Drawing.Size(816, 770);
+            this.Controls.Add(this.radCollapsiblePanel1);
             this.Controls.Add(this.PlayButton);
             this.Controls.Add(this.radButton2);
             this.Controls.Add(this.radButton1);
@@ -628,16 +777,24 @@ namespace TyreuPlayer
             this.Controls.Add(this.VolumeTrackBar);
             this.Controls.Add(this.radPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconScaling = Telerik.WinControls.Enumerations.ImageScaling.None;
+            this.KeyPreview = true;
+            this.MaximumSize = new System.Drawing.Size(816, 770);
+            this.MinimumSize = new System.Drawing.Size(446, 770);
             this.Name = "Main";
             this.Opacity = 0D;
+            this.radContextMenuManager1.SetRadContextMenu(this, this.radContextMenu1);
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
             this.RootElement.BorderHighlightColor = System.Drawing.Color.Black;
+            this.RootElement.MaxSize = new System.Drawing.Size(816, 770);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tyreu Player I";
             this.Shown += new System.EventHandler(this.Main_Shown);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Main_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
             this.radPanel1.PerformLayout();
@@ -661,6 +818,10 @@ namespace TyreuPlayer
             ((System.ComponentModel.ISupportInitialize)(this.PlaylistButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReplayButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ShuffleButton)).EndInit();
+            this.radCollapsiblePanel1.PanelContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radCollapsiblePanel1)).EndInit();
+            this.radCollapsiblePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PlayListTree)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -697,5 +858,15 @@ namespace TyreuPlayer
         private Telerik.WinControls.UI.RadButton radButton2;
         private Telerik.WinControls.UI.RadButton PlayButton;
         private System.Windows.Forms.Timer timer1;
+        private Telerik.WinControls.UI.RadContextMenu radContextMenu1;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem1;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem2;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem3;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem4;
+        private Telerik.WinControls.UI.RadContextMenuManager radContextMenuManager1;
+        private Telerik.WinControls.UI.RadCollapsiblePanel radCollapsiblePanel1;
+        private Telerik.WinControls.UI.RadTreeView PlayListTree;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
