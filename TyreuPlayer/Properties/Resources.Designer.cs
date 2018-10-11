@@ -83,6 +83,26 @@ namespace TyreuPlayer.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Дизлайк {
+            get {
+                object obj = ResourceManager.GetObject("Дизлайк", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Лайк {
+            get {
+                object obj = ResourceManager.GetObject("Лайк", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Меню_black {
             get {
                 object obj = ResourceManager.GetObject("Меню black", resourceCulture);
@@ -96,6 +116,16 @@ namespace TyreuPlayer.Properties {
         internal static System.Drawing.Bitmap Меню_white {
             get {
                 object obj = ResourceManager.GetObject("Меню white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Очередь {
+            get {
+                object obj = ResourceManager.GetObject("Очередь", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

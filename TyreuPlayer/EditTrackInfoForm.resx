@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,47 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\cover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Перемешать white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Перемешать white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Перемешать black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Перемешать black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Меню black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Меню black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Лайк" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Лайк.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Play" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Предыдущий" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Предыдущий.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Повторение black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Повторение black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Повторение white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Повторение white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Следующий" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Следующий.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Дизлайк" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Дизлайк.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Пауза" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Пауза.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Меню white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Меню white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Очередь" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Release\icons\Очередь.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
